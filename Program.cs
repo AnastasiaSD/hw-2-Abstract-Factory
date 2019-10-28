@@ -120,19 +120,19 @@ namespace AbstractFactory
 
     public class Car
     {
-        private IBody body;
-        private IMotor motor;
-        private ICabin cabin;
+        private IBody _body;
+        private IMotor _motor;
+        private ICabin _cabin;
 
         public Car(ICarFactory factory)
         {
-            body = factory.CreateBody();
-            motor = factory.CreateMotor();
-            cabin = factory.CreateCabin();
+            _body = factory.CreateBody();
+            _motor = factory.CreateMotor();
+            _cabin = factory.CreateCabin();
         }
 
-        public void GetNameBody() => Console.WriteLine(body.Name);
-        public void GetNameMotor() => Console.WriteLine(motor.Name);
-        public void GetNameCabin() => Console.WriteLine(cabin.Name);
+        public void GetNameBody() => Console.WriteLine(_body.Name);
+        public void GetNameMotor() => Console.WriteLine(_motor.Name);
+        public void GetNameCabin() => Console.WriteLine(_cabin.Name);
     }
 }
